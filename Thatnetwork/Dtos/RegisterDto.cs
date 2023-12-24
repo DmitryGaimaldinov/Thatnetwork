@@ -13,6 +13,7 @@ namespace Thatnetwork.Dtos
         public string Username { get; set; } = null!;
 
         [Required]
+        [StringLength(20, MinimumLength = 6)]
         public string Password { get; set; } = null!;
     }
 }

@@ -1,23 +1,59 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3ebce977-32a4-42e6-97a7-0438efe5c889</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Dtos\NoteDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.9" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.2.9" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.Json" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.32.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.11" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\photos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\AssetManifest.bin" />
+    <None Include="wwwroot\assets\NOTICES" />
+    <None Include="wwwroot\assets\packages\fluttertoast\assets\toastify.js" />
+    <None Include="wwwroot\assets\shaders\ink_sparkle.frag" />
+    <None Include="wwwroot\canvaskit\canvaskit.js" />
+    <None Include="wwwroot\canvaskit\canvaskit.wasm" />
+    <None Include="wwwroot\canvaskit\chromium\canvaskit.js" />
+    <None Include="wwwroot\canvaskit\chromium\canvaskit.wasm" />
+    <None Include="wwwroot\canvaskit\skwasm.js" />
+    <None Include="wwwroot\canvaskit\skwasm.wasm" />
+    <None Include="wwwroot\canvaskit\skwasm.worker.js" />
   </ItemGroup>
 
 </Project>

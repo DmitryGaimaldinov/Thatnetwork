@@ -1,8 +1,11 @@
-﻿namespace Thatnetwork.Dtos
+﻿using Thatnetwork.Users.Dtos;
+
+namespace Thatnetwork.Dtos
 {
     public class LoginResultDto
     {
-        public required string accessToken { get; set; }
-        public required string refreshToken { get; set; }
+        public required string AccessToken { get; set; }
+        public required string RefreshToken { get; set; }
+        public required UserDto UserDto { get; set; }
     }
 }
